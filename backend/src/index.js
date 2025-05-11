@@ -21,7 +21,7 @@ app.use(cookieParse());
 
 
 const corsOptions = {
-  origin: process.env.FRONTEND_URL,
+  origin: "https://job-backend-9961.onrender.com",
   credentials: true,
 };
 
