@@ -135,7 +135,7 @@ const UpdateProfile = ({ open, setOpen }) => {
                 <Label htmlFor="file">Resume</Label>
                 <Input
                   type="file"
-                  accept="application/pdf"
+                  accept="image/*"
                   name="file"
                   className="col-span-3"
                
