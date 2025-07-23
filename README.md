@@ -1,4 +1,4 @@
-# 🧑‍💼 JOB HUNT - Job Portal App
+# 🧑‍💼 Tech Hire - Job Portal App
 
 A modern and dynamic job portal application that connects job seekers with employers. Companies can post job listings, and users can browse and apply with ease.
 
