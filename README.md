@@ -1,112 +1,145 @@
-# 🧑‍💼 JOB HUNT - Job Portal Application
+# 🧑‍💼 JOB HUNT - Job Portal App
 
-A full-stack web application that allows companies to post job listings and candidates to browse and apply for jobs. This platform bridges the gap between employers and job seekers with an intuitive and modern interface.
-
----
+A modern and dynamic job portal application that connects job seekers with employers. Companies can post job listings, and users can browse and apply with ease.
 
 ## 🌐 Live Demo
 
-🔗 [Live Site]([https://your-live-site-link.com](https://job-backend-9961.onrender.com)) 
+- **Live**: [https://job-backend-9961.onrender.com](https://job-backend-9961.onrender.com)  
+
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-### 👤 Job Seeker
-- Sign up / Login
-- Browse and search jobs
-- Apply to job postings
-- View applied job history
-
-### 🏢 Company
-- Register / Login
-- Post new jobs
-- View list of job applicants
-- Edit or delete job listings
+- 🔐 **Authentication**: Secure login and signup using JWT  
+- 📝 **Job Posting**: Companies can post, edit, and delete job openings  
+- 🔍 **Job Search**: Users can browse, search, and filter job listings  
+- 📄 **Apply for Jobs**: Easy job application system with history tracking  
+- 🧠 **State Management**: Context API for efficient global state handling  
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-| Layer        | Technology                              |
-|--------------|------------------------------------------|
-| Frontend     | React.js, Tailwind CSS, React Router DOM |
-| Backend      | Node.js, Express.js                      |
-| Database     | MongoDB (via Mongoose)                   |
-| State Mgmt   | React Context API                        |
-| Auth         | JSON Web Token (JWT)                     |
-| Environment  | dotenv                                   |
+**Frontend:**
+
+- React.js  
+- Tailwind CSS  
+- Axios  
+- React Router DOM  
+- Context API  
+
+**Backend:**
+
+- Node.js  
+- Express.js  
+- MongoDB (with Mongoose)  
+- JWT Authentication  
 
 ---
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 job-hunt/
-├── client/                # React Frontend
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── context/
-│   │   └── App.js
-│   └── package.json
-├── server/                # Node.js Backend
-│   ├── controllers/
-│   ├── routes/
+├── client/               # React Frontend
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── context/
+│       └── App.jsx
+├── server/               # Express Backend
 │   ├── models/
-│   ├── middleware/
+│   ├── routes/
+│   ├── controllers/
 │   └── index.js
-└── README.md
-\`\`\`
+├── .env
+├── README.md
+└── package.json
+```
 
 ---
 
-## ⚙️ Getting Started
+## 🚀 Getting Started
 
-### 📦 Prerequisites
+### Prerequisites
 
-- Node.js installed
-- MongoDB connection URI (MongoDB Atlas or local)
+- Node.js & npm  
+- MongoDB Atlas account  
 
-### 🔧 Backend Setup
+### Installation
 
-\`\`\`bash
+```bash
+
+# Install backend dependencies
 cd server
 npm install
-# Create a .env file
-touch .env
-# Add the following:
-PORT=8000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-npm run dev
-\`\`\`
 
-### 🎨 Frontend Setup
-
-\`\`\`bash
-cd client
+# Install frontend dependencies
+cd ../client
 npm install
-npm start
-\`\`\`
+```
 
 ---
 
 ## 🔐 Environment Variables
 
-Inside \`server/.env\`:
+Create a `.env` file inside the `server/` directory:
 
-\`\`\`env
-PORT=8000
-MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/jobhunt
-JWT_SECRET=your_jwt_secret
-\`\`\`
+```env
+PORT=
+MONGODB_URL=
+JWT_SECRET=
+```
 
 ---
 
+## 📦 Backend API Routes
 
+### **Auth Routes**
 
+| Method | Route      | Description        |
+|--------|------------|--------------------|
+| POST   | `/signup`  | Register new user  |
+| POST   | `/signin`  | Authenticate user  |
+| GET    | `/logout`  | Logout user        |
 
+### **Job Routes**
 
+| Method | Route              | Description                     |
+|--------|--------------------|---------------------------------|
+| GET    | `/jobs`            | Get all job listings            |
+| POST   | `/jobs`            | Post a new job                  |
+| PUT    | `/jobs/:id`        | Edit an existing job            |
+| DELETE | `/jobs/:id`        | Delete a job                    |
+| POST   | `/jobs/apply/:id`  | Apply to a job by job ID        |
 
+---
 
+## 🧠 How it Works
+
+- Users sign up or log in  
+- Job seekers can browse and apply to jobs  
+- Employers can post and manage job listings  
+- All data is stored in MongoDB  
+- Context API manages global app state (auth, jobs, etc.)  
+
+---
+
+## 🧪 Test Account
+
+You can use the following test account to try the app without signing up:
+
+```json
+{
+  "email": "p@gmail.com",
+  "password": "1234"
+}
+```
+
+---
+
+## 👨‍💻 Author
+
+**Manish Kumar**
